@@ -1,0 +1,140 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+
+</head>
+    <body id="registiration">
+    
+          <p style="font-weight: bold;font-style: italic;font-size:35px ;color: beige;";><span style="color: rgb(233, 236, 61);font-size:50px;">F</span>ast Food Resturant</p>
+     
+<ul class="nav">
+    <li><a href="index.html" ><li class="fa fa-home" style="color: rgb(243, 117, 72);">Home</li></a></li>
+    <li><a href="register.html">Log in</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+
+
+   
+</ul>
+<form id="myform" action="menu.html" method="POST" Onsubmit="return validation()" autocomplete="on">
+    <label for="t">first name</label>
+    <br>
+    <input id="t" type="text"name="ttt" required>
+    <br>
+
+    <label for="l">last name</label>
+    <br>
+    <input id="l" type="text" name="llll" required>
+    <br>
+    <label for="email">E-mail</label>
+    <br>
+    <input id="email" type="email" name="email" required>
+    <br>
+    <label for="pass">password </label>
+    <br>
+    <input id="pass" type="password" class="control"name="password" required >
+    <br>
+    <label for="conpass"> confirm password </label>
+    <br>
+    <input id="conpass" type="password" class="control"name="passward" required >
+    <br>
+    <label for="mobile">Mobile Phone</label>
+    <br>
+
+    <input id="mobile"type="tel" class="control" maxlength="11" required>
+    <br>
+    <label for="gender">gender</label>
+    <br>
+    <select name="gender" id="gender" style="width:170px;">
+        <option value="1">male</option>
+        <option value="2">female</option>
+    </select>
+    <br>
+    <div class="sub">
+    <input class="sub" name="sss" type="submit">
+    </div>
+
+</form>
+
+
+
+
+<script>
+function validation(){
+  // store the value that user enter in variables
+  var user = document.getElementById('t').value;
+  var user2 =  document.getElementById('l').value;
+  var pass = document.getElementById('pass').value;
+  
+  var email = document.getElementById('email').value;
+  var mobile = document.getElementById('mobile').value;
+  
+  var myform = document.getElementById('myform');
+   // to check if that field empty or not
+  
+ 
+ //  to accert a name of 3 letters at least
+  if(user.length<3){
+      alert("first Name must be more than 2 letters");
+      return false;
+  }
+  if(user2.length<3){
+    alert("last Name must be more than 2 letters");
+    return false;
+}
+  if(mobile.length!=11){
+      alert("*Please Enter avalid number");
+      return false;
+  }
+  
+  
+  if(pass.search(/[ ]/)!=-1){
+     alert("must not include a space");
+  return false;
+ }
+  // limit the lenght of the  pass
+  if(pass.length != 8 ){
+    alert("please write a passward of 8 no long no less");
+      return false;
+  }
+    // must enclud numbers
+ if(pass.search(/[0-9]/)==-1){
+      
+      alert("must incluce at least a number");
+      return false;
+  }
+  //not to accept without upper characters
+  if(pass.search(/[A-Z]/)==-1){
+alert("must include at leasrt 1 upper character");
+      return false;
+  }
+  // not to accept without lower characters
+ if(pass.search(/[a-z]/)==-1){
+      alert("must include at least 1 lowwer character");
+  return false;
+ }
+  // not accept without special characters
+  if(pass.search(/[!\@\#\$\%\^\&\*\(\)\_\-\=\+\<\>\,\?]/)==-1){
+     
+         alert("must include 1 special character");
+      return false;
+     }
+  
+  
+ 
+    if(email.indexOf("@") == -1 || email.length < 6){
+    alert("Please Enter valid Email");
+     return false;
+}
+        }
+    </script>
+
+
+    </body>
+</html>

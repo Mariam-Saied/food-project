@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("WhatsApp\ Image\ 2021-06-06\ at\ 9.37.42\ AM\ \(5\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height:40px;
+    background-color: rgb(244, 248, 245) transparent;
+    list-style-type: none;
+    flex-grow:1;
+    border:4px solid wheat ;
+
+}
+
+li a{
+    width:calc(98%/5);
+    padding:10px;
+    font-size:20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(249, 252, 251);
+
+}
+.menu{
+text-align: center;
+padding:5px;
+margin:5px;
+color:rgb(243, 243, 83);
+font-weight: bold;
+font-size:35px;
+font-family:Lucida Handwriting ;}
+
+div.gallery{
+    margin:10px;
+    padding:10px;
+    width:calc(80%/6);
+    border:1px rgb(252, 247, 247) solid;
+    float: left;
+    height:270px;
+   
+}
+
+div.gallery:hover{
+    border:2px solid rgb(247, 244, 244) ;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    color: cornsilk;
+    font-size:14px;
+  }
+  .h{
+    text-align: center;
+    padding:10px;
+    margin:5px;
+    color:rgb(243, 243, 83);
+    font-weight: bold;
+    font-size:35px;
+    font-family:Lucida Handwriting ;
+    
+}
+
+
+
+    @media screen and (max-width:600px) {
+        .nav{
+             width:100%;
+             height: 220px;
+             display:flex;
+             flex-direction:column;
+             justify-content: center;
+             align-items:center;
+             top:0;
+             z-index:1;
+             overflow: hidden;
+     
+             
+         }
+         body{
+            background-image: url("WhatsApp\ Image\ 2021-06-06\ at\ 9.37.42\ AM\ \(5\).jpeg");
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            backface-visibility:initial;
+        }
+        
+         li a{
+             font-size: 30px;
+             border-bottom: 1px solid white;
+             padding:5px;
+             margin-bottom:2px;}
+            
+            div .gallery{
+                width: 90%;
+               margin-bottom: 100px;
+               height:650px;
+            }
+            .h{
+                margin-top: 550px;
+            }
+        div.desc{
+            font-size: 25px;
+        }
+            
+    }
+            
+        
+    
+     
+     
+    
